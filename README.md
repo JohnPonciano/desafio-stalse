@@ -31,11 +31,6 @@ Sistema de gerenciamento de tickets de suporte com dashboard de métricas e auto
 
 ## 🚀 Como Rodar (Docker Compose - Recomendado)
 
-### Pré-requisitos
-- Docker e Docker Compose instalados
-- Pelo menos 2GB de RAM disponível
-- Porta 3000, 8000 e 5678 livres
-
 ### Iniciar todos os serviços
 
 1. Clone ou baixe o repositório.
@@ -60,6 +55,12 @@ Isso irá:
 - Acesse http://localhost:3000 para o frontend
 - Acesse http://localhost:8000/docs para a documentação da API FastAPI
 - Acesse http://localhost:5678 para o n8n
+
+### Observações
+
+- O usuario deve ser criado e depois o workflow importado no n8n. ( TicketUpdateWebhook.json )
+- No n8n, para o webhook funcionar, é necessário verifique se o método esta configurado como POST (pode ter sido salvo como GET).
+
 
 ### Parar os serviços
 
@@ -236,11 +237,6 @@ docker-compose.yml      # Orquestração de todos os serviços
 README.md               # Este arquivo
 ```
 
-## 🎨 Design
-
-- **Tema**: Dark mode (fundo preto, texto branco, accent azul)
-- **Componentes**: Cards, tabelas responsivas, badges coloridos
-- **Navegação**: Sidebar fixa com links para Dashboard e Tickets
 
 ## 📝 Notas
 

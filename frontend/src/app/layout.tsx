@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <div className="fixed top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-200 to-gray-300 border-b-3 border-black flex items-center justify-between px-4 z-50 shadow-md">
-      <span className="font-bold text-sm tracking-wider text-gray-800">◼ Ticket Manager</span>
+      <span className="font-bold text-sm tracking-wider text-gray-800">Mini Inbox - Ticket Manager</span>
       <div className="text-xs text-gray-600 font-mono" suppressHydrationWarning>
         {currentTime.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })} {currentTime.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
       </div>
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Ticket Manager</title>
+        <title>Mini Inbox - Ticket Manager</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
