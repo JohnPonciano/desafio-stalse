@@ -1,0 +1,87 @@
+{
+  "name": "Ticket Update Webhook",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ticket-update",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "2abc781a-b066-4290-80e0-54a30e602f6d",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        48,
+        -160
+      ],
+      "webhookId": "ticket-update"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "id": "5f21f867-d57d-42a4-a7c2-0a90a65f5863",
+      "name": "Process Ticket Update",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        256,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "61a224a6-2521-4ce5-ab94-2ad8136ee82a",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        448,
+        -160
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Process Ticket Update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Ticket Update": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "69e9cee7-2a79-47c5-82de-037736052088",
+  "meta": {
+    "instanceId": "21572886b3c3f7d58b1646a279902e97fcd24df5ebb47014697cf123ea601879"
+  },
+  "id": "XvC0lRKQVEbtHR1u",
+  "tags": []
+}

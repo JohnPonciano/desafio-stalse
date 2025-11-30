@@ -1,0 +1,7 @@
+.env
+.env.example
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.override.example.yml
+n8n/.n8nrc
+n8n/.n8nrc.example
