@@ -248,8 +248,6 @@ README.md               # Este arquivo
 
 ## 📸 Screenshots
 
-Adicione aqui prints da interface para ilustrar o funcionamento:
-
 - **Dashboard de Métricas**: Print da página `/dashboard` mostrando os cards e gráficos.
 - ![Dashboard](./screenshots/Screenshot%20From%202025-11-30%2020-26-13.png)
 - **Lista de Tickets**: Print da página `/tickets` com a tabela e busca.
