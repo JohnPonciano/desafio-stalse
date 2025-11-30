@@ -251,9 +251,14 @@ README.md               # Este arquivo
 Adicione aqui prints da interface para ilustrar o funcionamento:
 
 - **Dashboard de Métricas**: Print da página `/dashboard` mostrando os cards e gráficos.
+- ![Dashboard](./screenshots/Screenshot%20From%202025-11-30%2020-26-13.png)
 - **Lista de Tickets**: Print da página `/tickets` com a tabela e busca.
+- ![Tickets](./screenshots/Screenshot%20From%202025-11-30%2020-27-05.png)
 - **Detalhes do Ticket**: Print da página `/tickets/[id]` com os botões de edição.
+- ![Ticket](./screenshots/Screenshot%20From%202025-11-30%2020-27-18.png)
 - **Workflow n8n**: Print do n8n mostrando o workflow importado e ativo.
+- ![n8n1](./screenshots/Screenshot%20From%202025-11-30%2020-28-24.png)
+- ![n8n1](./screenshots/Screenshot%20From%202025-11-30%2020-29-02.png)
 
 ## 🧪 Testando o Sistema
 
